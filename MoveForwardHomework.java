@@ -36,11 +36,7 @@ package homework2;
 
 	    // Make this return true when this Command no longer needs to run execute()
 	    protected boolean isFinished() {
-	    		double timeElapsed = System.currentTimeMillis() - startingTime;
-	    		if(timeElapsed < time) {
-	    			return false;
-	    		}
-	    		return true;
+	    		return System.currentTimeMillis() - startingTime >= time;
 	    }
 
 	    // Called once after isFinished returns true
